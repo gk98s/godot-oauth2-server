@@ -1,0 +1,28 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[addons]
+
+http_manager/auth/port=40542
+
+[application]
+
+config/name="Godot PCKE"
+run/main_scene="uid://cl0rtx17q8h1d"
+config/features=PackedStringArray("4.4", "Mobile")
+config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/http_manager/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="mobile"

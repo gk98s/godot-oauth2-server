@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl0rtx17q8h1d"]
+
+[ext_resource type="Script" uid="uid://bh5bfnqvdx1w8" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://crxxyvqvavmkw" path="res://addons/oauth2_server/oauth_callback_listener.gd" id="2_h2yge"]
+
+[node name="Main" type="Node" node_paths=PackedStringArray("oauth_listener")]
+script = ExtResource("1_0xm2m")
+oauth_listener = NodePath("OAuthCallbackListener")
+
+[node name="OAuthCallbackListener" type="Node" parent="."]
+script = ExtResource("2_h2yge")
+metadata/_custom_type_script = "uid://crxxyvqvavmkw"
+
+[connection signal="oauth_code_received" from="OAuthCallbackListener" to="." method="_on_o_auth_callback_listener_oauth_code_received"]
