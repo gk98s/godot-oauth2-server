@@ -1,9 +1,5 @@
 config_version=5
 
-[addons]
-
-http_manager/auth/port=40542
-
 [application]
 
 config/name="godot-oauth2-server"
